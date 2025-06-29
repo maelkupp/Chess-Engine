@@ -12,7 +12,7 @@
 <!-- 1. PROJECT OVERVIEW                                       -->
 <!-- ========================================================= -->
 ## Overview
-MyChessEngine is a **from-scratch C++ chess engine** that searches ~N nodes/s on a single core and speaks (almost) UCI.  
+MyChessEngine is a **from-scratch C++ chess engine**
 It implements:
 
 - **Minimax with α–β pruning**
