@@ -78,7 +78,6 @@ bool get_opening_book(const std::string& fen){
     if(it != opening_book.end()){
         std::string book_move = get_weighted_book_move(it->second, rng);
         std::cout << book_move << std::endl;
-        std::cerr << "got move from opening book\n";
         return true;
     }
     return false;
@@ -100,7 +99,6 @@ int main() {
             uint64_t key = compute_zobrist_key(engine.white_to_move, engine.pieces, engine.board);
             engine.board.key = key; //store the key in the board
         } else if (line == "go") {
-            std::cerr << engine.fen << "\n";
             if(!get_opening_book(engine.fen)){
                 int max_depth = 4;
                 node_t root = node_t(engine.white_to_move, std::array<int, 5> {-1,-1,-1,-1,-1}, engine.board, engine.pieces);
